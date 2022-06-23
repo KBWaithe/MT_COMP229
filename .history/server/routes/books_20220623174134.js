@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
     else
     {
       res.render('books/index', {
-        title: 'bookCollection',
+        title: 'books',
         books: books
       });
     }

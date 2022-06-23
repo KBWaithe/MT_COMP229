@@ -16,10 +16,11 @@
                 <tr>
                   <th>Title</th>
                   <th class="text-center">Author</th>
+                  <th class="text-center">Description</th>
                   <th class="text-center">Genre</th>
                   <th class="text-center">Price</th>
-                  <th class="text-center">Edit</th>
-                  <th class="text-center">Delete</th>
+                  <th class="text-center">Edit Button</th>
+                  <th class="text-center">Delete Button</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,21 +28,17 @@
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
                   <td><%= books[count].Title %></td>
+                  <td class="text-center">$<%= books[count].Price %></td>
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
-                  <td class="text-center">$<%= books[count].Price %></td>
-                  
 
                   <td class="text-center">
-                    <a href="/bookCollection/edit/<%= books[count]._id %>" class="btn btn-primary"> <i class="fas fa-pencil-alt"></i> Edit </a>
-
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
                   </td>
 
                   <td class="text-center">
-                    <a href="/bookCollection/delete/<%= books[count]._id %>" class="btn btn-danger"> <i class="fas fa-trash-alt"></i> Delete </a>
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->

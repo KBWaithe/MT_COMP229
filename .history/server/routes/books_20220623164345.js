@@ -29,7 +29,7 @@ router.get('/details/add', (req, res, next) => {
   res.render('books/details', {title: 'Add Book', book: ''})
 
     /*****************
-     *      2 A      *
+     * ADD CODE HERE *
      *****************/
 
 });
@@ -60,13 +60,13 @@ router.post('/details/add', (req, res, next) => {
   )
 
     /*****************
-     *      2 B      *
+     * ADD CODE HERE *
      *****************/
 
 });
 
 // GET the Book Details page in order to edit an existing Book
-router.get('/edit/:id', (req, res, next) => {
+router.get('/details/edit/:id', (req, res, next) => {
   let id = req.params.id
   book.findById(id, (err, bookEdit) =>
   {
@@ -77,17 +77,17 @@ router.get('/edit/:id', (req, res, next) => {
   }
       else
     {
-      res.render('books/details', {title: 'Edit Book', book: bookEdit})
+      res.render('bookCollection/details', {title: 'Edit Book', book: bookEdit})
     }
   })
 
     /*****************
-     *      2 C      *
+     * ADD CODE HERE *
      *****************/
 });
 
 // POST - process the information passed from the details form and update the document
-router.post('/edit/:id', (req, res, next) => {
+router.post('/details/edit/:id', (req, res, next) => {
 
   let id = req.params.id
   let bookUpdate = book({
@@ -113,7 +113,7 @@ router.post('/edit/:id', (req, res, next) => {
   });
 
     /*****************
-     *      2 D      *
+     * ADD CODE HERE *
      *****************/
 
 });
@@ -136,7 +136,7 @@ router.get('/delete/:id', (req, res, next) => {
   });
 
     /*****************
-     *      2 E      *
+     * ADD CODE HERE *
      *****************/
 });
 

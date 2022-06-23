@@ -82,7 +82,7 @@ router.get('/edit/:id', (req, res, next) => {
   })
 
     /*****************
-     *      2 C      *
+     * ADD CODE HERE *
      *****************/
 });
 
@@ -113,7 +113,7 @@ router.post('/edit/:id', (req, res, next) => {
   });
 
     /*****************
-     *      2 D      *
+     * ADD CODE HERE *
      *****************/
 
 });
@@ -136,7 +136,7 @@ router.get('/delete/:id', (req, res, next) => {
   });
 
     /*****************
-     *      2 E      *
+     * ADD CODE HERE *
      *****************/
 });
 

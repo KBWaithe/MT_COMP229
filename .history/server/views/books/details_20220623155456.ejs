@@ -19,16 +19,16 @@
               <div class="form-group">
                 <label for="AuthorTextField">Author</label>
                 <input type="text" class="form-control" id="AuthorTextField"
-                placeholder="Book Author" name="author" value="<%= book.Author %>"  required>
+                placeholder="Book Author" name="author" value="<%= books.Author %>"  required>
               </div>
               <div class="form-group">
                 <label for="GenreTextField">Genre</label>
                 <input type="text" class="form-control" id="GenreTextField"
-                placeholder="Book Genre" name="genre" value="<%= book.Genre %>"  required>
+                placeholder="Book Genre" name="genre" value="<%= books.Genre %>"  required>
               </div>
 
               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/bookCollection" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
             </form>
         </div>
       </div>
