@@ -28,21 +28,18 @@ router.get('/', (req, res, next) => {
       });
     }
   });
-});
 
-    /*****************
-     *      2 A      *
-     *****************/
+});
 
 //  GET the Book Details page in order to add a new Book
 router.get('/details/add', (req, res, next) => {
   res.render('books/details', {title: 'Add Book', book: ''})
 
-});
-
     /*****************
-     *      2 B      *
+     *      2 A      *
      *****************/
+
+});
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/details/add', (req, res, next) => {
@@ -50,6 +47,7 @@ router.post('/details/add', (req, res, next) => {
     {
       "Title": req.body.title,
       "Author": req.body.author,
+      "Description": req.body.description,
       "Genre": req.body.genre,
       "Price": req.body.price
     });
@@ -65,12 +63,14 @@ router.post('/details/add', (req, res, next) => {
       {
         res.redirect('/bookCollection');
       }
-    })
-});
+    }
+  )
 
     /*****************
-     *      2 C      *
+     *      2 B      *
      *****************/
+
+});
 
 // GET the Book Details page in order to edit an existing Book
 router.get('/edit/:id', (req, res, next) => {
@@ -87,11 +87,11 @@ router.get('/edit/:id', (req, res, next) => {
       res.render('books/details', {title: 'Edit Book', book: bookEdit})
     }
   })
-});
 
     /*****************
-     *      2 D      *
+     *      2 C      *
      *****************/
+});
 
 // POST - process the information passed from the details form and update the document
 router.post('/edit/:id', (req, res, next) => {
@@ -101,6 +101,7 @@ router.post('/edit/:id', (req, res, next) => {
     "_id": id,
     "Title": req.body.title,
     "Author": req.body.author,
+    "Description": req.body.description,
     "Genre": req.body.genre,
     "Price": req.body.price
   });
@@ -117,11 +118,12 @@ router.post('/edit/:id', (req, res, next) => {
       res.redirect('/bookCollection');
     }
   });
-});
 
     /*****************
-     *      2 E      *
+     *      2 D      *
      *****************/
+
+});
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
@@ -139,6 +141,10 @@ router.get('/delete/:id', (req, res, next) => {
       res.redirect('/bookCollection');
     }
   });
+
+    /*****************
+     *      2 E      *
+     *****************/
 });
 
 

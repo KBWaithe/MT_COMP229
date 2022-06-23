@@ -40,6 +40,7 @@ router.get('/details/add', (req, res, next) => {
 
 });
 
+
     /*****************
      *      2 B      *
      *****************/
@@ -50,6 +51,7 @@ router.post('/details/add', (req, res, next) => {
     {
       "Title": req.body.title,
       "Author": req.body.author,
+      "Description": req.body.description,
       "Genre": req.body.genre,
       "Price": req.body.price
     });
@@ -92,7 +94,7 @@ router.get('/edit/:id', (req, res, next) => {
     /*****************
      *      2 D      *
      *****************/
-
+    
 // POST - process the information passed from the details form and update the document
 router.post('/edit/:id', (req, res, next) => {
 
@@ -101,6 +103,7 @@ router.post('/edit/:id', (req, res, next) => {
     "_id": id,
     "Title": req.body.title,
     "Author": req.body.author,
+    "Description": req.body.description,
     "Genre": req.body.genre,
     "Price": req.body.price
   });
@@ -119,10 +122,6 @@ router.post('/edit/:id', (req, res, next) => {
   });
 });
 
-    /*****************
-     *      2 E      *
-     *****************/
-
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
   let id = req.params.id;
@@ -139,6 +138,10 @@ router.get('/delete/:id', (req, res, next) => {
       res.redirect('/bookCollection');
     }
   });
+
+    /*****************
+     *      2 E      *
+     *****************/
 });
 
 

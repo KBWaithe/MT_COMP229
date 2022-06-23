@@ -40,6 +40,7 @@ router.get('/details/add', (req, res, next) => {
 
 });
 
+
     /*****************
      *      2 B      *
      *****************/
@@ -122,7 +123,7 @@ router.post('/edit/:id', (req, res, next) => {
     /*****************
      *      2 E      *
      *****************/
-
+    
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
   let id = req.params.id;
@@ -139,6 +140,8 @@ router.get('/delete/:id', (req, res, next) => {
       res.redirect('/bookCollection');
     }
   });
+
+
 });
 
 

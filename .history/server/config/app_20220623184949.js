@@ -4,7 +4,6 @@ Author's Name: Kristian Waithe
 Student ID: 300637474
 Web App Name: Midterm > Personal Portfolio - My Favourite Books   
 */
-
 // modules for node and express
 let createError = require('http-errors');
 let express = require('express');
